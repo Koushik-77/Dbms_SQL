@@ -8,27 +8,27 @@ CREATE TABLE customer (
     salary NUMBER(10, 2)
 );
 
-CREATE TABLE order (
+CREATE TABLE orders (
     oid NUMBER,
     day DATE,
     customer_id NUMBER,
-    amount NUMBER(10, 2),
+    amount NUMBER(10, 2)
 );
 
 a. Write a query to perform INNER JOIN for the above tables:
 
 SELECT *
 FROM customer
-INNER JOIN `order` ON customer.id = `order`.customer_id;
+INNER JOIN orders ON customer.id = orders.customer_id;
 
 b. Write a query to perform LEFT OUTER JOIN for the above tables:
 
 SELECT *
 FROM customer
-LEFT OUTER JOIN `order` ON customer.id = `order`.customer_id;
+LEFT OUTER JOIN orders ON customer.id = orders.customer_id;
 
 c. Write a query to perform RIGHT OUTER JOIN for the above tables:
 
 SELECT *
 FROM customer
-RIGHT OUTER JOIN `order` ON customer.id = `order`.customer_id;
+RIGHT OUTER JOIN orders ON customer.id = orders.customer_id;
